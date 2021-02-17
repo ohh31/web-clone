@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header{
+      background-color: white;
+      height: 104px;
+      position:absolute;
+  }
+
+.container{
+    width: auto; 
+    margin :auto;
+}
+
+ .logo{
+      margin-left: 60px;
+      margin-top: 40px;
+      float: left;
+  }
+
+  .menu{
+    margin-left: 43px;
+    margin-top: 39px;
+    width: 228.531px;
+    height: 24px;
+    float: left;
+}
+.menu-item {
+    float: left;
+    width: 53.45px;
+    margin-block-start: 0.4em;
+}
+
+.menu-item-long {
+    float: left;
+    width: 68.17px;
+    margin-block-start: 0.4em;
+}
+
+.notice{
+    margin-left: 54px;
+    margin-top: 43px;
+    width: 562px; 
+    float: left;
+}
+.volumn-icon{
+    float: left;
+    margin: 5px;
+}
+.notification{
+    vertical-align: middle;
+    display: inline-block;
+    padding : 2 8;
+    width: 490px;
+    overflow: hidden;
+    color: grey;
+}
+
+.info{
+    height: 70px;
+    width :157px;
+    margin: 0 31px 0 0;
+    padding-left: 200px;
+    float: left;
+    text-align: right;
+}
+
+.alarm-icon{
+    
+    margin: 37px 31px 0 0;
+    float: left;
+}
+
+.profile-icon{
+    /* position: absolute; */
+    margin : 34px 0 0 0;
+    float: left;
+    clip-path: circle(36px at center);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+  }
