@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body {
+  font-family: Helvetica, sans-serif;
+}
+
+/*header - container*/
+
+.header {
+  background-color: #c22b2bc0;
+  text-align: center;
+  font-size: 35px;
+}
+
+.logo {
+    padding: 14px 16px;
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+.nav{
+    list-style-type : none;
+    margin: 0;
+  padding: 0;
+  float: left;
+}
+
+li {
+  float: left;
+  padding: 14px 16px;
+}
+
+li a{
+
+    text-align: center;
+    font-size: 16px;
+    color : black;
+    text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline black;
+}
+
+.alarm_img{
+    padding: 14px 16px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.profile_img{
+    padding: 14px 16px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+/*header - container*/
+
+.content{
+    background-color: #722bc2c0;
+    height: 2427px;
+    width: 1076px;
+}
+
+.inner_feature{
+    background-color: burlywood;
+}
+
+.article{
+    text-align: center;
+}
+.section_best{
+    width: 858px;
+    display: inline;
+    text-align: center;
+
+}
+
+ul{
+        list-style-type : none;
+}
+
+li .card{
+    background-color: rgb(37, 131, 76);
+    width: 296px;
+    height: 362px;
+}
+
+.card__img{
+    width: 288px;
+    height: 168px;
+}
+
+.section_list{
+    display:inline-block;
+}
+
+</style>
+</head>
+<body>
+    <div class = "header">
+        <img class = "logo" src = "data:image/png;base64,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">
+            <ul class = "nav">
+                <li><a href="#home" class="active">피드</a></li>
+                <li><a href="#news">스토리</a></li>
+                <li><a href="#contact">스킨</a></li>
+                <li><a href="#about">포럼</a></li>
+              </ul>
+        <img class = "alarm_img" src = "https://image.flaticon.com/icons/png/512/51/51839.png">
+        <img class= "profile_img" src = "https://i1.daumcdn.net/thumb/C100x100/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Ftistory_admin%2Fblog%2Fadmin%2Fprofile_default_00.png">   
+    </div>
+    <div class = "content">
+        <div class = "inner_feature">
+            <h1 class ="inner__title">
+                Story
+            </h1>
+            <p class = "inner__description"> 
+                티스토리의 다양한 이야기들을 만나보세요
+            </p>
+        </div>
+        <div class = "article">
+            <div class = "section_tab">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'live')">라이브</button>
+                    <button class="tablinks" onclick="openCity(event, 'travel')">여행.맛집</button>
+                    <button class="tablinks" onclick="openCity(event, 'culture')">문화.연예</button>
+                    <button class="tablinks" onclick="openCity(event, 'it')">IT</button>
+                    <button class="tablinks" onclick="openCity(event, 'sport')">스포츠</button>
+                    <button class="tablinks" onclick="openCity(event, 'news')">시사</button>
+                </div>
+            </div>
+            <div class = "section_best">
+                <ul>
+                    <li class = "card">                    
+                    <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                    <p class="card__category">IT 인터넷</p>
+                    <p class="card__like">공감 7</p>
+                    <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                    <p class="card__src">공대놀이터</p>
+                    <p class="card__writer">by 누들누들이</p>
+                    </li>
+                    <li class = "card">                    
+                        <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                        <p class="card__category">IT 인터넷</p>
+                        <p class="card__like">공감 7</p>
+                        <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                        <p class="card__src">공대놀이터</p>
+                        <p class="card__writer">by 누들누들이</p>
+                        </li>
+                        <li class = "card">                    
+                            <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                            <p class="card__category">IT 인터넷</p>
+                            <p class="card__like">공감 7</p>
+                            <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                            <p class="card__src">공대놀이터</p>
+                            <p class="card__writer">by 누들누들이</p>
+                            </li>
+                </ul>
+            </div>
+            <div class = "section_list">
+                <div class = "list_item">
+                    <p class="card__category">IT 인터넷</p>
+                    <p class="card__time">2시간 전</p>
+                    <p class="card__like">공감 8</p>
+                    <p class ="card__title">인스타그램에서 삭제한 사진 및 게시물 복구하는 방법</p>
+                    <p class="card__src">It 정보 공유</p>
+                    <p class="card__writer">by Storm, Hong</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+
+    </div>
+    <main>
+
+    </main>
+    
+    
+</body>
+</html>
