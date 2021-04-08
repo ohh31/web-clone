@@ -15,29 +15,34 @@
   background-color: #c22b2bc0;
   text-align: center;
   font-size: 35px;
+  display: flex;
+  flex-direction : row;
+  flex-wrap: nowrap;
+  justify-content : flex-start;
+  align-items : center;
+
 }
 
 .logo {
     padding: 14px 16px;
     width: 24px;
     height: 24px;
-    float: left;
 }
 
 .nav{
     list-style-type : none;
     margin: 0;
   padding: 0;
-  float: left;
 }
 
 li {
-  float: left;
   padding: 14px 16px;
+  display: inline-flex;
+  flex-direction : row;
+  flex-wrap: nowrap;
 }
 
 li a{
-
     text-align: center;
     font-size: 16px;
     color : black;
@@ -61,7 +66,7 @@ li a:hover {
     height: 24px;
     object-fit: cover;
 }
-/*header - container*/
+
 
 .content{
     background-color: #722bc2c0;
@@ -71,35 +76,54 @@ li a:hover {
 
 .inner_feature{
     background-color: burlywood;
+    display: flex;
+    flex-direction : column;
 }
 
 .article{
     text-align: center;
 }
+
+.section_tab{
+    display: flex;
+    flex-direction : row;
+    flex-wrap: nowrap;
+    align-items : center;
+}
+
+
 .section_best{
-    width: 858px;
-    display: inline;
-    text-align: center;
-
+    display: flex;
+    flex-direction : row;
 }
 
-ul{
-        list-style-type : none;
+.card{
+    background-color: white;
 }
 
-li .card{
-    background-color: rgb(37, 131, 76);
-    width: 296px;
-    height: 362px;
-}
 
-.card__img{
+.post_img{
     width: 288px;
     height: 168px;
 }
 
+.card__top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: tomato;
+    justify-content : flex-start;
+}
+
+.card__bottom{
+    display: flex;
+    flex-direction: column;
+    align-items : flex-start;
+}
+
 .section_list{
-    display:inline-block;
+    display: flex;
+    flex-direction : column;
 }
 
 </style>
@@ -116,6 +140,7 @@ li .card{
         <img class = "alarm_img" src = "https://image.flaticon.com/icons/png/512/51/51839.png">
         <img class= "profile_img" src = "https://i1.daumcdn.net/thumb/C100x100/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Ftistory_admin%2Fblog%2Fadmin%2Fprofile_default_00.png">   
     </div>
+
     <div class = "content">
         <div class = "inner_feature">
             <h1 class ="inner__title">
@@ -127,44 +152,69 @@ li .card{
         </div>
         <div class = "article">
             <div class = "section_tab">
-                <div class="tab">
                     <button class="tablinks" onclick="openCity(event, 'live')">라이브</button>
                     <button class="tablinks" onclick="openCity(event, 'travel')">여행.맛집</button>
                     <button class="tablinks" onclick="openCity(event, 'culture')">문화.연예</button>
                     <button class="tablinks" onclick="openCity(event, 'it')">IT</button>
                     <button class="tablinks" onclick="openCity(event, 'sport')">스포츠</button>
                     <button class="tablinks" onclick="openCity(event, 'news')">시사</button>
+            </div>
+                <div class = "section_best">
+                    <div class = "card">                    
+                    <img class = "post_img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                    <div class = "card__top">
+                        <p class="post_category">IT 인터넷</p>
+                        <p class="post_like">공감 7</p>
+                    </div>
+                    <p class ="post_title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                    <div class = "card__bottom">
+                    <p class="post_src">공대놀이터</p>
+                    <p class="post_writer">by 누들누들이</p>
+                    </div>
+                    </div>
+                    <div class = "card">                    
+                        <img class = "post_img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                        <div class = "card__top">
+                            <p class="post_category">IT 인터넷</p>
+                            <p class="post_like">공감 7</p>
+                        </div>
+                        <p class ="post_title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                        <div class = "card__bottom">
+                        <p class="post_src">공대놀이터</p>
+                        <p class="post_writer">by 누들누들이</p>
+                        </div>
+                        </div>
+                        <div class = "card">                    
+                            <img class = "post_img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
+                            <div class = "card__top">
+                                <p class="post_category">IT 인터넷</p>
+                                <p class="post_like">공감 7</p>
+                            </div>
+                            <p class ="post_title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
+                            <div class = "card__bottom">
+                            <p class="post_src">공대놀이터</p>
+                            <p class="post_writer">by 누들누들이</p>
+                            </div>
+                            </div>
                 </div>
-            </div>
-            <div class = "section_best">
-                <ul>
-                    <li class = "card">                    
-                    <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
-                    <p class="card__category">IT 인터넷</p>
-                    <p class="card__like">공감 7</p>
-                    <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
-                    <p class="card__src">공대놀이터</p>
-                    <p class="card__writer">by 누들누들이</p>
-                    </li>
-                    <li class = "card">                    
-                        <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
-                        <p class="card__category">IT 인터넷</p>
-                        <p class="card__like">공감 7</p>
-                        <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
-                        <p class="card__src">공대놀이터</p>
-                        <p class="card__writer">by 누들누들이</p>
-                        </li>
-                        <li class = "card">                    
-                            <img class = "card__img" src="https://i1.daumcdn.net/thumb/C576x336/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVFFvn%2Fbtq12vRJZ8b%2Fjj8fuHWBm3t8o6ItVDKSmk%2Fimg.jpg" alt="Girl in a jacket">
-                            <p class="card__category">IT 인터넷</p>
-                            <p class="card__like">공감 7</p>
-                            <p class ="card__title">인텔 아이맥2020 21.5인치 고민 끝에 구매결정</p>
-                            <p class="card__src">공대놀이터</p>
-                            <p class="card__writer">by 누들누들이</p>
-                            </li>
-                </ul>
-            </div>
+        
             <div class = "section_list">
+                <div class = "list_item">
+                    <p class="card__category">IT 인터넷</p>
+                    <p class="card__time">2시간 전</p>
+                    <p class="card__like">공감 8</p>
+                    <p class ="card__title">인스타그램에서 삭제한 사진 및 게시물 복구하는 방법</p>
+                    <p class="card__src">It 정보 공유</p>
+                    <p class="card__writer">by Storm, Hong</p>
+                </div>
+                <div class = "list_item">
+                    <p class="card__category">IT 인터넷</p>
+                    <p class="card__time">2시간 전</p>
+                    <p class="card__like">공감 8</p>
+                    <p class ="card__title">인스타그램에서 삭제한 사진 및 게시물 복구하는 방법</p>
+                    <p class="card__src">It 정보 공유</p>
+                    <p class="card__writer">by Storm, Hong</p>
+                </div>
                 <div class = "list_item">
                     <p class="card__category">IT 인터넷</p>
                     <p class="card__time">2시간 전</p>
