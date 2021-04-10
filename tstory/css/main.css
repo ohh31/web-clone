@@ -1,86 +1,305 @@
+
 body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .header{
-      background-color: white;
-      height: 104px;
-      position:absolute;
-  }
-
-.container{
-    width: auto; 
-    margin :auto;
+ font-family: Helvetica, sans-serif;
+ margin: 0px;
+ padding:0px;
 }
 
- .logo{
-      margin-left: 60px;
-      margin-top: 40px;
-      float: left;
-  }
+/* header */
 
-  .menu{
-    margin-left: 43px;
-    margin-top: 39px;
-    width: 228.531px;
-    height: 24px;
-    float: left;
-}
-.menu-item {
-    float: left;
-    width: 53.45px;
-    margin-block-start: 0.4em;
+.header {
+ background-color: #ffffffc0;
+ text-align: center;
+ font-size: 35px;
+ display: flex;
+ flex-direction : row;
+ flex-wrap: nowrap;
+ justify-content : flex-start;
+ align-items : flex-end;
+ width: auto;
+ height: 72px;
 }
 
-.menu-item-long {
-    float: left;
-    width: 68.17px;
-    margin-block-start: 0.4em;
+.logo {
+   width: 24px;
+   height: 24px;
+   margin-top: 40px;
+   margin-left: 60px;
 }
 
-.notice{
-    margin-left: 54px;
-    margin-top: 43px;
-    width: 562px; 
-    float: left;
-}
-.volumn-icon{
-    float: left;
-    margin: 5px;
-}
-.notification{
-    vertical-align: middle;
-    display: inline-block;
-    padding : 2 8;
-    width: 490px;
-    overflow: hidden;
-    color: grey;
+.header_nav{
+   list-style-type : none;
+   margin-left: 43px;
+   margin-top: 39px;
 }
 
-.info{
+li {
+ padding-left: 17px;
+ padding-right:   7px;
+ display: inline-flex;
+ flex-direction : row;
+ justify-content: flex-end;
+ flex-wrap: nowrap;
+}
+
+li a{
+   text-align: center;
+   font-size: 16px;
+   color : black;
+   text-decoration: none;
+}
+
+li a:hover {
+ text-decoration: underline black;
+}
+
+.header_right{
+    left: 919px;
+    width: 157px;
     height: 70px;
-    width :157px;
-    margin: 0 31px 0 0;
-    padding-left: 200px;
-    float: left;
-    text-align: right;
+    margin-right: 60px;
+    position:absolute;
+ }
+
+.alarm_img{
+   margin-top: 43px;
+   margin-right: 37px;
+   margin-left:  6px;
+   margin-bottom: 6px;
+   width: 18px;
+   height: 18px;
+   object-fit: cover;
 }
 
-.alarm-icon{
-    
-    margin: 37px 31px 0 0;
-    float: left;
+.profile_img{
+   width: 36px;
+   height: 36px;
+   object-fit: cover;
+   margin-top: 37px;
+   margin-right: 31px;
 }
 
-.profile-icon{
-    /* position: absolute; */
-    margin : 34px 0 0 0;
-    float: left;
-    clip-path: circle(36px at center);
+
+/* content */
+
+.content{
+   background-color: white;
+   height: 2427px;
+   width: 1076px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-  }
+.inner_feature{
+   margin-top: 50px;
+   background-color: white;
+   display: flex;
+   flex-direction : column;
+   margin-left: 151.5px;
+   margin-right: 151.5px;
+   padding-top: 37px;
+}
+
+.inner__title{
+   font-size: 13px;
+   line-height: 1.5px;
+}
+
+.inner__description{
+font-size: 24px;
+line-height: 1px;
+letter-spacing: -0.6px;
+font-family: "Nanum Gothic", sans-serif;
+font-weight:300;
+}
+
+.article{
+   text-align: center;
+}
+
+.section_tab{
+   margin-left: 151.5px;
+   margin-top: 50px;
+   display: flex;
+   flex-direction : row;
+   flex-wrap: nowrap;
+    justify-content : flex-start;
+   background-color: white;
+   height: 40px;
+   width: 896px;
+}
+
+.tab_menu{
+ width: 96px;
+ font-size: 36px;
+ color : black;
+ text-decoration-line: none;
+ line-height: 1;
+ font-weight: 300;
+ letter-spacing: -1.2px;  
+ font-family: "Nanum Gothic", sans-serif;
+ padding-right: 48px;
+ background-color: white;
+ border-bottom: 1px solid #ddd;
+}
+
+.tab_menu:hover{
+   text-decoration: underline black;
+}
+
+.section_best{
+   display: flex;
+   width: 1199px;
+   background-color: #f5f5f5;
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
+.card_list{
+   display: flex;
+   flex-direction : row;
+   justify-content: center;
+   margin-left: 151.5px;
+   background-color: #f5f5f5;
+}
+
+.card{
+   background-color: rgb(255, 255, 255);
+   margin-right: 15px;
+}
+
+.card:hover{
+   box-shadow: 5px 5px 5px 5px lightgrey;
+}
+
+.post_img{
+   width: 288px;
+   height: 168px;
+}
+
+.card__top{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   background-color: rgb(255, 255, 255);
+   justify-content : flex-start;
+   padding-top: 22px;
+   padding-left: 24px;
+   font-weight: 300;
+   font-size: 13px;
+}
+
+.post_title{
+   /* position:absolute; */
+   display: -webkit-box;
+   max-width: 211px;
+   max-height: 56px;
+   -webkit-box-orient: vertical;
+   padding-top: 6px;
+   padding-left: 22px;
+   overflow: hidden;
+   font-size: 22px;
+   line-height: 30px;
+   font-weight: 400;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   text-align:left;
+}
+
+.card__bottom{
+   display: flex;
+   flex-direction: column;
+   align-items : flex-start;
+   padding-left: 24px;
+   padding-top: 30px;
+   padding-bottom: 23px;
+   font-weight: 300;
+   font-size: 13px;
+}
+
+.section_list{
+   display: flex;
+   flex-direction : column;
+   align-items: center;
+   margin-top: 8px;
+   margin-bottom: 160px;
+}
+
+.list_item{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   background-color: violet;
+   width: 896px;
+   height: 192px;
+   padding-top: 32px;    
+   padding-bottom: 18px;
+}
+
+.item_host{
+   display: flex;
+   flex-direction: row;
+}
+
+.item_info{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 159px;
+}
+
+.card__time{
+   
+}
+
+.card__category{
+ 
+}
+.card__like{
+
+}
+
+.item_content{
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   align-items: flex-start;
+   
+}
+
+.card__title{
+   font-size: 22px;
+   font-weight: 400;
+   padding-bottom: 6px;
+}
+.card__description{
+   font-weight: 400;
+   color:#777;
+   font-size: 14px;
+   text-align: start;
+}
+.post_title{
+   padding-top: 2px;
+   padding-bottom: 6px;
+   width: 564px;
+   height: 32px;
+}
+
+.item_host{
+   padding-top : 3px;
+   display: flex;
+   flex-direction: row;
+   padding-left: 2px;
+   width: 552px;
+   height: 30px;
+}
+.post_src {
+   padding-top: 8px;
+   padding-left: 12;
+}
+.post_writer{
+   padding-left: 5px;
+   padding-top: 7px;
+}
+.item__img{
+   width: 128px;
+   height: 128px;
+}
