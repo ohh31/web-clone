@@ -77,6 +77,7 @@ li a:hover {
    object-fit: cover;
    margin-top: 37px;
    margin-right: 31px;
+   clip-path: circle(50%);
 }
 
 
@@ -146,12 +147,15 @@ font-weight:300;
 }
 
 .section_best{
-   display: flex;
-   width: 1199px;
-   background-color: #f5f5f5;
-   padding-top: 40px;
-   padding-bottom: 40px;
-}
+    display: flex;
+    width: 1199px;
+    background-color: #f5f5f5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+ }
+
+ 
+/* card component*/
 
 .card_list{
    display: flex;
@@ -170,9 +174,9 @@ font-weight:300;
    box-shadow: 5px 5px 5px 5px lightgrey;
 }
 
-.post_img{
-   width: 288px;
-   height: 168px;
+.card__title{
+    padding-top: 6px;
+    padding-left: 22px;
 }
 
 .card__top{
@@ -183,123 +187,131 @@ font-weight:300;
    justify-content : flex-start;
    padding-top: 22px;
    padding-left: 24px;
-   font-weight: 300;
-   font-size: 13px;
+  
 }
 
+.card__bottom{
+    display: flex;
+    flex-direction: column;
+    align-items : flex-start;
+    padding-left: 24px;
+    padding-top: 30px;
+    padding-bottom: 23px;
+ }
+
+/*list component*/
+
+ .section_list{
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    
+ }
+ 
+ .list_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    width: 896px;
+    height: 192px;
+    padding-top: 40px;   
+    padding-left: 130px; 
+ }
+ 
+ hr{
+color: rgb(241, 239, 239);
+width: 896px;
+border: 0.2px solid;
+ }
+
+ .list_item_left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 159px;
+ }
+ 
+ .list_item_content{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+    
+ }
+ 
+ .list_item_bottom{
+    padding-top : 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2px;
+    width: 552px;
+    height: 30px;
+ }
+
+ .list_item_title{
+     padding-bottom: 6px;
+ }
+
+ /*post text component*/ 
+
+.post_category{
+    font-weight: 300;
+    font-size: 13px;
+    padding-right: 6px;
+}
+
+.post_time{
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.post_like{
+    font-weight: 300;
+    font-size: 13px;
+}
+.post_src{
+    font-weight: 300;
+    font-size: 13px;
+    padding-right: 6px;
+}
+.post_writer{
+    font-weight: 300;
+    font-size: 13px;
+}
 .post_title{
    /* position:absolute; */
    display: -webkit-box;
    max-width: 211px;
-   max-height: 56px;
+   max-height: 60px;
    -webkit-box-orient: vertical;
-   padding-top: 6px;
-   padding-left: 22px;
-   overflow: hidden;
+  
+   overflow: visible;
    font-size: 22px;
    line-height: 30px;
    font-weight: 400;
    text-overflow: ellipsis;
    white-space: nowrap;
    text-align:left;
+   color: rgb(44, 44, 44);
 }
 
-.card__bottom{
-   display: flex;
-   flex-direction: column;
-   align-items : flex-start;
-   padding-left: 24px;
-   padding-top: 30px;
-   padding-bottom: 23px;
-   font-weight: 300;
-   font-size: 13px;
-}
+.post_description{
+    font-weight: 400;
+    color:#777;
+    font-size: 14px;
+    text-align: start;
+    line-height: 22px;
+ }
 
-.section_list{
-   display: flex;
-   flex-direction : column;
-   align-items: center;
-   margin-top: 8px;
-   margin-bottom: 160px;
-}
+.post_list_img{
+    width: 128px;
+    height: 128px;
+ }
 
-.list_item{
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   background-color: violet;
-   width: 896px;
-   height: 192px;
-   padding-top: 32px;    
-   padding-bottom: 18px;
-}
-
-.item_host{
-   display: flex;
-   flex-direction: row;
-}
-
-.item_info{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   width: 159px;
-}
-
-.card__time{
-   
-}
-
-.card__category{
- 
-}
-.card__like{
-
-}
-
-.item_content{
-   display: flex;
-   flex-direction: column;
-   justify-items: center;
-   align-items: flex-start;
-   
-}
-
-.card__title{
-   font-size: 22px;
-   font-weight: 400;
-   padding-bottom: 6px;
-}
-.card__description{
-   font-weight: 400;
-   color:#777;
-   font-size: 14px;
-   text-align: start;
-}
-.post_title{
-   padding-top: 2px;
-   padding-bottom: 6px;
-   width: 564px;
-   height: 32px;
-}
-
-.item_host{
-   padding-top : 3px;
-   display: flex;
-   flex-direction: row;
-   padding-left: 2px;
-   width: 552px;
-   height: 30px;
-}
-.post_src {
-   padding-top: 8px;
-   padding-left: 12;
-}
-.post_writer{
-   padding-left: 5px;
-   padding-top: 7px;
-}
-.item__img{
-   width: 128px;
-   height: 128px;
-}
+ .post_card_img{
+    width: 288px;
+    height: 168px;
+ }
