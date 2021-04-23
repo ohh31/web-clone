@@ -43,14 +43,14 @@ const CLICKED_CLASS = 'clicked';
 example3.innerHTML = 'Change the font style (using css)';
 
 function handleClicked(){
-    // example3.classList.toggle(CLICKED_CLASS);
-    const hasClass = example3.classList.contains(CLICKED_CLASS);
+     example3.classList.toggle(CLICKED_CLASS);
+    // const hasClass = example3.classList.contains(CLICKED_CLASS);
 
-    if(hasClass==false){
-        example3.classList.add(CLICKED_CLASS);
-    } else{
-        example3.classList.remove(CLICKED_CLASS);
-    }
+    // if(hasClass==false){
+    //     example3.classList.add(CLICKED_CLASS);
+    // } else{
+    //     example3.classList.remove(CLICKED_CLASS);
+    // }
 }
 
 example3.addEventListener("click", handleClicked);
