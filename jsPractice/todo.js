@@ -19,7 +19,6 @@ function deleteTodo(event){
         return toDo.id !== parseInt(li.id);
     });
     console.log(cleanToDos);
-
 }
 
 function paintTodo(text){

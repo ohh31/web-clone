@@ -1,31 +1,31 @@
 const body = document.querySelector("body");
-
 const IMG_NUMBER = 4;
 
-//이미지가 중복되지 않게 랜덤으로 나옴 
-
-function changeBg(){
-  
+function createImage(imgNumber){
+  const image = new Image();
+  const imageSrc = `images/${imgNumber + 1}.jpg`;
+  image.src = imageSrc;
+  image.classList.add("bgImage");
+  return image;
 }
 
-function paintImage(imgNumber) {
-  const image = new Image();
-  image.src = `images/${imgNumber + 1}.jpg`;
-  image.classList.add("bgImage");
-  // image.classList.replace("bgImage","bgImage")
-  body.prepend(image);
+function paintImage(imgNumber) {  
+  const image =  document.body.querySelector(".bgImage"); //!!document.getElementById("Anchor Id");
+  console.log(image);
+  const newImage = createImage(imgNumber);
+  body.prepend(newImage);
+  if(image !== null){
+  body.removeChild(image);}
 }
 
 function getRandom() {
   const number = Math.floor(Math.random() * IMG_NUMBER);
-  console.log(number);
-  return number;
+  paintImage(number);
 }
 
 function init() {
-  const randomNumber = getRandom();
-  
+  getRandom();
+  setInterval(getRandom, 4000);
 }
 
 init();
-// setInterval(init, 1000);
