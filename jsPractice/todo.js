@@ -58,11 +58,11 @@ function loadToDos(){
     }
 }
 
+
 function init(){
     loadToDos();
     toDoForm.addEventListener("submit",handleSubmit);
     toDoList.addEventListener("click",deleteTodo);
-
 }
 
 init();

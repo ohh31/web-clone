@@ -2,7 +2,6 @@ const form = document.querySelector(".ans-form"); //클래스 태그 아이디
 input = form.querySelector("input");
 greeting = document.querySelector(".greeting");
 toDo = document.querySelector(".toDo-container");
-greetingBox = document.querySelector(".greeting-container");
 
 const USER_LN = "currentUser"
 SHOWING_CN = "showing";
@@ -29,6 +28,7 @@ function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Good Morning, ${text}`;
+    toDo.style.display = 'block';
 }
 
 function loadName() {
