@@ -3,7 +3,7 @@ toDoInput = toDoForm.querySelector("input"),
 toDoList = document.querySelector(".toDo-list");
 
 const TODOS_LS = "toDos"
-const toDos = [];
+let toDos = [];
 
 
 function saveTodo(text){
@@ -14,10 +14,11 @@ function deleteTodo(event){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
-    const cleanToDos= toDos.filter(function(toDo){
+    cleanToDos= toDos.filter(function(toDo){
         return toDo.id !== parseInt(li.id);
     });
-    localStorage.removeItem(TODOS_LS);
+    toDos = cleanToDos;
+    saveTodo(toDos);
     console.log(cleanToDos);
 }
 
